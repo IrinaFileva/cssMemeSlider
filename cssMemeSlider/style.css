@@ -1,0 +1,132 @@
+.body{
+  overflow-x: hidden;
+}
+  
+.slider{
+  max-height: 46rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap:2rem;
+  border-radius: 1rem;
+  background:  
+    radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #FDB931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+}
+  
+.slider_input{
+  display:none;
+}
+  
+.slider_window{
+  max-width: 60rem;
+  margin: 1rem auto 0 auto;
+  overflow: hidden;
+}
+  
+.container_image{
+  width: 240rem;
+  height: 37.75rem;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+  
+.slider_image{
+  border-radius: 0.5rem;
+  width: 60rem;
+  height: 37.75rem;
+}
+  
+.wrapper_bottom{
+  max-width: 60rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+  
+.title_window{
+  max-width: 13.5rem;
+  overflow: hidden;
+}
+  
+.container_title{
+  width: 55rem;
+  display:flex;
+  transition: all 0.3s ease-in-out;
+}
+  
+.slider_title{
+  font: normal 600 1.4rem/1.4rem Forum;
+}
+  
+.title_cover1{
+  margin-right: 1.5rem;
+}
+  
+.title_cover3{
+  margin-left: 3.4rem;
+  margin-right: 2.7rem;
+}
+  
+.container_controls{
+  display: flex;  
+  margin: 0;
+}
+  
+.wrapper_control{
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  border: 0.1rem solid black;
+  margin: 0;
+  padding: 0;
+}
+  
+.slider_control{
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+  
+.wrapper_control:hover{
+  border-color: rgb(124, 71, 27);
+}
+  
+.slider_control:has(.slider_input:checked) .wrapper_control{
+  background-color: rgb(124, 71, 27);
+  border-color: rgb(124, 71, 27);
+}
+  
+.slider:has(#inp1:checked) .container_image{
+  margin-left: 0rem;  
+}
+.slider:has(#inp2:checked) .container_image{
+  margin-left: -100%;  
+}
+.slider:has(#inp3:checked) .container_image{
+  margin-left: -200%; 
+}
+.slider:has(#inp4:checked) .container_image{
+  margin-left: -300%;   
+}
+  
+.slider:has(#inp1:checked) .container_title{
+  margin-left: 0rem;  
+}
+.slider:has(#inp2:checked) .container_title{
+  margin-left: -100%;  
+}
+.slider:has(#inp3:checked) .container_title{
+  margin-left: -200%; 
+}
+.slider:has(#inp4:checked) .container_title{
+  margin-left: -300%;   
+}
